@@ -1880,6 +1880,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+ion-icon {
+    pointer-events: none;
+}
+
 .light-mode .sidebar,
 .light-mode article{
     background-color: #ffffff;
@@ -1947,3 +1951,5 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding-top: 60px;
     z-index: 2;
   }
+
+
