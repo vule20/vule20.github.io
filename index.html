@@ -86,7 +86,7 @@
         <div class="info-content">
           <h1 class="name" title="Richard hanrick">Vu Le</h1>
 
-          <p class="title">Software & Hardware Engineer</p>
+          <p class="title">Software Engineer</p>
 
         </div>
 
@@ -112,7 +112,7 @@
 
             <div class="contact-info">
               <p class="contact-title">Location</p>
-              <address>Hanoi, Vietnam</address>
+              <address>United States</address>
             </div>
 
           </li>
@@ -125,8 +125,8 @@
 
             <div class="contact-info">
 	      <p class="contact-title">Company</p>
-	      <a href="https://phenikaa-x.com/">
-		<address>Phenikaa-X</address>
+	      <!-- <a href="https://phenikaa-x.com/"> -->
+		<address>Markov.AI</address>
 	      </a>
             </div>
           </li>
@@ -225,19 +225,25 @@
 	  <h1 id="demo"></h1>
 
 	  <!-- development time tag -->
-	  <script>
+<!-- 	  <script>
 	    var outputElement = document.getElementById("demo");
 	    outputElement.style.color = "red";
 	    const date = new Date(document.lastModified);
-	    document.getElementById("demo").innerHTML = "This site is under development. Last updated at";
+	    document.getElementById("demo").innerHTML = "This site is under development. Last updated at: ";
 	    document.getElementById("demo").innerHTML += date;
-	  </script>
+	  </script> -->
 	  <!-- development time tag -->
 
           <p>
-            I'm software and hardware engineer from Hanoi, Vietnam, working on many aspects of computer science 
-            such as AI, software engineering, servers and even FPGA hardware for AI vision. In addition, I am
-            also an academic researcher on applied AI.
+            I'm software engineer, working on many aspects of computer science 
+            such as computer vision, software engineering, servers. Currently, my focus has shifted
+            to system research for the Metaverse, 3D computer vision, and data engineering for recommendation systems.
+          </p>
+          <p>
+            At the moment, I'm a developer at MarkovAI, which is a startup platform for local events. In addition, I also work closely
+            with <a href="https://felixshing.github.io/" style="display: inline; color: rgb(216, 94, 7)";>Ruizhi Cheng</a>
+            and <a href="https://cs.gmu.edu/~bohan/" style="display: inline; color:rgb(216, 94, 7)";>Prof. Bo Han</a> at George Mason University to improve infrustructures for
+            the Metaverse and holographic communication.
           </p>
         </section>
 
@@ -256,7 +262,7 @@
                 <h4 class="h4 service-item-title">Computer Vision</h4>
 
                 <p class="service-item-text">
-                  Object detection, GAN, segmentation
+                  Object detection, GAN, 3D Computer Vision (NeRF)
                 </p>
               </div>
             </li>
@@ -267,10 +273,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Embedded FPGA vision</h4>
+                <h4 class="h4 service-item-title">Data Mining</h4>
 
                 <p class="service-item-text">
-                  Embedded FPGA vision on Vitis-AI for automotive applications
+                  Distributed Web Scraping and Data Cleaning
                 </p>
               </div>
             </li>
@@ -284,7 +290,7 @@
                 <h4 class="h4 service-item-title">HPC servers</h4>
 
                 <p class="service-item-text">
-                  Cloud servers and remote computing.
+                  Remote servers and cloud computing.
                 </p>
               </div>
             </li>
@@ -296,10 +302,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Virtual & Augmented Reality</h4>
+                <h4 class="h4 service-item-title">The Metaverse</h4>
 
                 <p class="service-item-text">
-                  This will come next
+                  This will come very soon.
                 </p>
               </div>
 
@@ -351,18 +357,30 @@
         </div>
 
 
+    
+
 	<!--
             - #Map tracker
 	  -->
 
 	<section class="service">
-	  
-          <h3 class="h3 service-title">My page visits</h3>
+    <h3 class="h3 service-title">My page visits</h3>
 	  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=23pIdJVhMjN_8WNUnKTi-FQTV-hOMyUeuluWO9V4xPc&cl=ffffff&w=a"></script>
 
 	  <!-- <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=23pIdJVhMjN_8WNUnKTi-FQTV-hOMyUeuluWO9V4xPc"></script> -->
-
+    <p id="updated-time"></p>
         </section>
+
+        <!-- development time tag -->
+    <script>
+      var outputElement = document.getElementById("updated-time");
+      outputElement.style.color = "red";
+      const date = new Date(document.lastModified);
+      document.getElementById("updated-time").innerHTML = "This site is under development. Last updated at: ";
+      document.getElementById("updated-time").innerHTML += date;
+    </script>
+    <!-- development time tag -->        
+
 
       </article>
 
@@ -804,6 +822,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 
