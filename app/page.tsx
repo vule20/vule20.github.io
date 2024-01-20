@@ -8,8 +8,6 @@ export default function Home() {
   return (
     <main>
       <IssuesPage />
-      <Link href="/users">Users</Link>
-      <ProductCard />
     </main>
   );
 }
