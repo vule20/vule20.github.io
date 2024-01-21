@@ -49,7 +49,7 @@ export default function Home() {
               <div className="avatar online">
                 <div className="w-40 h-40 rounded-full">
                   {/* <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" /> */}
-                  <img src="/images/avatar.jpg" alt="Vincent (Vu)'s avatar" />
+                  <img src="/images/avatar.jpg" alt="Vincent (Vu)&rsquo;s avatar" />
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function Home() {
               Vietnam National University, Hanoi. I also had greate time
               collaborating with with Dr. Hai Phan and my incredibly nice and
               talented folks from Sillicon Valley to work on face idendication.
-              In addition, I also worked with Prof. Bo Han's group at George
+              In addition, I also worked with Prof. Bo Han&rsquo;s group at George
               Mason University on neural human rendering for real-time
               holographics communication (the Metaverse). You can check my
               publication page for more details
@@ -77,16 +77,16 @@ export default function Home() {
             <p className="mb-2">
               Apart my role as a Ph.D student, I also hold appointment as a
               co-founder and software developer at MarkovAI, a startup in San
-              Francisco, where my folks and I build Abbie.live, a social
+              Francisco, where my folks and I build ***.live, a social
               platform for finding best local events in a given location using
-              recommendation systems and multimodal AI. If you're interested
+              recommendation systems and multimodal AI. If you&rsquo;re interested
               about my interesting engineering projects, be sure to visit them
               at projects.
             </p>
 
             <p className="mb-2 text-red-500 font-bold">
-              I'm actively looking for collaboration in quantum machine
-              learning! Please contact me if you're interested.
+              I&rsquo;m actively looking for collaboration in quantum machine
+              learning! Please contact me if you&rsquo;re interested.
             </p>
           </div>
 
