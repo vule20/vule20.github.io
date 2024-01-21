@@ -18,6 +18,7 @@ const NavBar = () => {
     { label: "Coursework", href: "/coursework" },
     { label: "Misc", href: "/misc" },
     { label: "Support", href: "/support" },
+    { label: "Resume", href: "/pdf/Vu_Le_Resume.pdf" },
   ];
 
   return (

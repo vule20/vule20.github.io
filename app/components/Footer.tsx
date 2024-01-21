@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { socialLinks, contacts } from "./page";
+import { socialLinks, contacts } from "./socials";
 
 const Footer = () => {
   const currentYear: number = new Date().getFullYear();
@@ -11,16 +11,19 @@ const Footer = () => {
   return (
     <footer className="w-full bg-[#881c1c] text-white p-5">
       <div className="flex items-center space-x-36 justify-center">
+        {/* Logo Image */}
         <div className="">
           <img src="/images/umass.svg" alt="UMass Amherst" width="250" />
         </div>
 
+        {/* Copyright */}
         <div className="items-center justify-center flex flex-col">
-          &copy; 2021-{currentYear} Vincent (Vu) Le.
+        &copy; 2021-{currentYear} Vincent (Vu) Le.
           <p className="flex">
             {React.createElement(locationContact?.icon || "", { size: 20 })}{" "}
             {locationContact?.value}
           </p>
+          
         </div>
 
         {/* contacts */}
@@ -39,6 +42,14 @@ const Footer = () => {
               </li>
             ))}
           </ul>
+        </div>
+        {/* Page view counts */}
+        <div className="stats shadow">
+          <div className="stat text-xs">
+            <div className="stat-title">Total Page Views</div>
+            <div className="stat-value">2400</div>
+            <div className="stat-desc">21% more than last month</div>
+          </div>
         </div>
       </div>
     </footer>
