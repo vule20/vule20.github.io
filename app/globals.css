@@ -8,14 +8,8 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-  }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
-  padding: 1rem;
-  background: white;
+  background: white;  
 }
