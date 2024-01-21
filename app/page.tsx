@@ -9,47 +9,47 @@ import { FaXTwitter, FaLocationDot } from "react-icons/fa6";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { SiGooglescholar } from "react-icons/si";
 
+export const contacts = [
+  { label: "Gmail", icon: CgMail, value: "vdle@umass.edu" },
+  {
+    label: "Location",
+    icon: FaLocationDot,
+    value: "140 Governors Dr, Amherst, MA 01002, United States",
+  },
+  {
+    label: "Google Scholar",
+    icon: SiGooglescholar,
+    value: "Google Scholar",
+    href: "https://scholar.google.com/citations?user=WqEDp2oAAAAJ&hl=en",
+  },
+];
+export const socialLinks = [
+  {
+    label: "LinkedIn",
+    icon: FaLinkedin,
+    href: "https://www.linkedin.com/in/vudle/",
+  },
+  {
+    label: "X (Twitter)",
+    icon: FaXTwitter,
+    href: "https://twitter.com/LeDucVu11",
+  },
+  { label: "Github", icon: FaGithub, href: "https://github.com/vu-leduc" },
+  {label: "YouTube", icon: FaYoutube, href: "#"}
+];
+
 export default function Home() {
-  const contacts = [
-    { label: "Gmail", icon: CgMail, value: "vdle@umass.edu" },
-    {
-      label: "Location",
-      icon: FaLocationDot,
-      value: "140 Governors Dr, Amherst, MA 01002, United States",
-    },
-    {
-      label: "Google Scholar",
-      icon: SiGooglescholar,
-      value: "Google Scholar",
-      href: "https://scholar.google.com/citations?user=WqEDp2oAAAAJ&hl=en",
-    },
-  ];
-  const socialLinks = [
-    {
-      label: "LinkedIn",
-      icon: FaLinkedin,
-      href: "https://www.linkedin.com/in/vudle/",
-    },
-    {
-      label: "X (Twitter)",
-      icon: FaXTwitter,
-      href: "https://twitter.com/LeDucVu11",
-    },
-    { label: "Github", icon: FaGithub, href: "https://github.com/vu-leduc" },
-  ];
   return (
     <main>
       <div className="mx-auto max-w-2xl lg:max-w-5xl">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+          {/* avatar div */}
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <div className="avatar online">
-                <div className="w-45 h-45 rounded-full">
+                <div className="w-40 h-40 rounded-full">
                   {/* <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" /> */}
-                  <img
-                    src="/images/avatar.jpg"
-                    alt="Vincent (Vu)'s avatar"
-                  />
+                  <img src="/images/avatar.jpg" alt="Vincent (Vu)'s avatar" />
                 </div>
               </div>
             </div>
@@ -84,32 +84,15 @@ export default function Home() {
               at projects.
             </p>
 
-            <p className="mb-2">
-              I'm actively looking for excellent collaborators to work with me
-              in quantum machine learning!
+            <p className="mb-2 text-red-500 font-bold">
+              I'm actively looking for collaboration in quantum machine
+              learning! Please contact me if you're interested.
             </p>
           </div>
 
-          {/* Display my social platforms there for connection */}
           <div className="lg:pl-20">
-            <ul>
-              {socialLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-                  >
-                    {React.createElement(link.icon, { size: 20 })}{" "}
-                    <span className="ml-4">Follow me on {link.label}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-
             {/* Contacts such as email and address */}
-            <div className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40 flex">
+            <div>
               <ul>
                 {contacts.map((contact, index) => (
                   <li
@@ -133,7 +116,25 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            
+
+            {/* Display my social platforms there for connection */}
+            <div className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40 flex">
+              <ul>
+                {socialLinks.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+                    >
+                      {React.createElement(link.icon, { size: 20 })}{" "}
+                      <span className="ml-4">Follow me on {link.label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

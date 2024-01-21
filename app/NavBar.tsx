@@ -12,12 +12,12 @@ import classnames from "classnames";
 const NavBar = () => {
   const currentPath = usePathname();
   const links = [
-    { label: "Project", href: "/project" },
-    { label: "Coursework", href: "/coursework" },
+    { label: "Projects", href: "/projects" },
+    { label: "Publications", href: "/publications" },
     { label: "Blogs", href: "/blogs" },
-    { label: "Tools", href: "/tools" },
+    { label: "Coursework", href: "/coursework" },
     { label: "Misc", href: "/misc" },
-    { label: "Support", href: "/support" },    
+    { label: "Support", href: "/support" },
   ];
 
   return (
