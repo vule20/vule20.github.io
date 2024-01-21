@@ -4,7 +4,7 @@ function page() {
   return (
     <div>
       <h1>
-        Vu Le's support
+        Vu Le &rsquo; support
       </h1>
     </div>
   )

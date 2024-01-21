@@ -4,7 +4,7 @@ function page() {
   return (
     <div>
       <h1>
-        Vu Le's misc
+        Vu Le &rsquo; tools
       </h1>
     </div>
   )

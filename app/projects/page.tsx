@@ -4,7 +4,7 @@ function page() {
   return (
     <div>
       <h1>
-        Vu Le's projects
+        Vu Le &rsquo; projects
       </h1>
     </div>
   )
