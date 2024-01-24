@@ -8,21 +8,22 @@ import News from "./components/News";
 import Bio from "./components/Bio";
 import { socialLinks, contacts } from "./components/socials";
 
-
 export default function Home() {
   return (
     <main>
       <div className="mx-auto max-w-2xl lg:max-w-5xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 mb-10">
           {/* avatar div */}
-          <div className="lg:pl-20">
-            <div className="max-w-xs px-0 mb-4 lg:max-w-none">
+          <div className="relative lg:pl-20">
+            <div className="relative w-56 h-56 overflow-hidden rounded-full max-w-xs px-0 mb-4 lg:max-w-none mx-10">
               <img
                 src="/images/avatar.jpg"
                 alt="Vincent (Vu)&rsquo;s avatar"
-                width="400"
+                className="w-full h-auto object-cover"
               />
+              <div className="absolute top-0 left-0 w-16 h-16 bg-green-500 border-2 border-white rounded-full"></div>
             </div>
+
             {/* <div className="lg:pl-20"> */}
             {/* Contacts such as email and address */}
             <div className="px-10">

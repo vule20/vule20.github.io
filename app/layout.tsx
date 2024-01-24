@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en" className="h-full" data-theme="dracula">
       <body
         className={`${inter.variable} bg-white text-black dark:bg-[#090908] dark:text-white h-full
-         selection:bg-gray-50 dark:selection:bg-gray-800 flex flex-col`}
+         selection:bg-gray-300 dark:selection:bg-gray-800 flex flex-col`}
       >
         <div className="flex-1">
           <NavBar />

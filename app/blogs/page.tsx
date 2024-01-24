@@ -1,11 +1,15 @@
-import React from "react";
+import { NotionAPI } from "notion-client";
+import NotionPage from "../components/NotionPage";
 
-function page() {
+export default async function Home() {
+  const notion = new NotionAPI();
+
+  const recordMap = await notion.getPage("2fc44604a5644ff9a77a4816c7dc9f3e");
+  console.log("--------------------------------------------------");
+  console.log(recordMap);
   return (
-    <div>
-      <h1>Vu Le &rsquo; blogs made with notion</h1>
-    </div>
+    <main>
+      <NotionPage recordMap={recordMap} />
+    </main>
   );
 }
-
-export default page;
