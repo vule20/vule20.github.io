@@ -101,9 +101,6 @@ export const NotionPage = ({
   }
   const title = getPageTitle(recordMap);
 
-  console.log("title is");
-  console.log(title);
-
   return (
     <>
       <Head>

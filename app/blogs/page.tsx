@@ -1,15 +1,35 @@
 import { NotionAPI } from "notion-client";
-import NotionPage from "../components/NotionPage";
+import "katex/dist/katex.min.css";
+import "prismjs/themes/prism-tomorrow.css";
+import "react-notion-x/src/styles.css";
+import styles from "./global.module.css";
+import { getAllPagesInSpace, uuidToId, getPageProperty } from "notion-utils";
+import { fetchAllData } from "./lib/notion";
+import NotionWidget from "./lib/notionWidgets";
 
 export default async function Home() {
   const notion = new NotionAPI();
+  const getPage = async (pageId: string) => {
+    return notion.getPage(pageId);
+  };
+  const pageId = "11b9b468cf754336aa5e57fa0ba7e40a";
+  const rootSpaceId = "80377898-f1f7-48b0-ac38-06ad0ba48096";
 
-  const recordMap = await notion.getPage("2fc44604a5644ff9a77a4816c7dc9f3e");
-  console.log("--------------------------------------------------");
-  console.log(recordMap);
+  const pageMap = await getAllPagesInSpace(pageId, rootSpaceId, getPage, {
+    traverseCollections: false,
+  });
+
+  const paths = Object.keys(pageMap)
+    .map((pageId) => pageId.replace(/-/g, ""))
+    .filter((path) => path && path !== "/");
+
+  const recordMaps = await fetchAllData(paths);
+
   return (
     <main>
-      <NotionPage recordMap={recordMap} />
+      {recordMaps.map((recordMap, index) => (
+        <NotionWidget recordMap={recordMap} index={index} />
+      ))}
     </main>
   );
 }
