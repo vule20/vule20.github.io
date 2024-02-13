@@ -2,11 +2,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ProductCard from "./components/ProductCard";
 import IssuesPage from "./issues/page";
 import News from "./components/News";
 import Bio from "./components/Bio";
-import { socialLinks, contacts } from "./components/socials";
+import { contactUrls, contacts } from "@/app/components/Socials";
 
 export default function Home() {
   return (
@@ -54,13 +53,13 @@ export default function Home() {
             {/* Display my social platforms there for connection */}
             <div className="px-10 mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40 flex">
               <ul>
-                {socialLinks.map((link, index) => (
+                {contactUrls.map((link, index) => (
                   <li key={index}>
                     <a
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+                      className="hover:underline group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
                     >
                       {React.createElement(link.icon, { size: 20 })}{" "}
                       <span className="ml-4">{link.label}</span>

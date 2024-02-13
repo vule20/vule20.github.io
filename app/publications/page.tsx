@@ -13,7 +13,7 @@ function page() {
       <div className="flex hover: #881c1c mb-5 mt-5">
         <div className="flex badge badge-accent">WACV2023</div>
         <div className="mr-20 pr-28 pl-24 " id="wacv2023">
-          <div className="hover: #881c1c hover:bg-gray-900 focus:text-blue-800 focus:bg-gray-100 transition-color font-bold text-gray-800 text-xl">
+          <div className="hover: #881c1c hover:bg-gray-300 focus:text-blue-800 focus:bg-gray-100 transition-color font-bold text-gray-800 text-xl">
             Fast and Interpretable Face Identification for Out-Of-Distribution
             Data Using Vision Transformers.
           </div>
@@ -31,7 +31,7 @@ function page() {
       <div className="flex hover: #881c1c mb-5 mt-5">
         <div className="flex badge badge-accent">WACV2023</div>
         <div className="mr-20 pr-28 pl-24 " id="wacv2023">
-          <div className="hover: #881c1c hover:bg-gray-900 focus:text-blue-800 focus:bg-gray-100 transition-color font-bold text-gray-800 text-xl">
+          <div className="hover: #881c1c hover:bg-gray-300 focus:text-blue-800 focus:bg-gray-100 transition-color font-bold text-gray-800 text-xl">
             Fast and Interpretable Face Identification for Out-Of-Distribution
             Data Using Vision Transformers.
           </div>

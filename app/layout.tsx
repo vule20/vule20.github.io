@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <div className="flex-1">
           <NavBar />
-          <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
             {children}
           </main>
         </div>
