@@ -17,7 +17,7 @@ export const contacts = [
     href: "https://scholar.google.com/citations?user=WqEDp2oAAAAJ&hl=en",
   },
 ];
-export const socialLinks = [
+export const contactUrls = [
   {
     label: "LinkedIn",
     icon: FaLinkedin,
@@ -28,6 +28,6 @@ export const socialLinks = [
     icon: FaXTwitter,
     href: "https://twitter.com/LeDucVu11",
   },
-  { label: "Github", icon: FaGithub, href: "https://github.com/vu-leduc" },
+  { label: "Github", icon: FaGithub, href: "https://github.com/vincent-dl" },
   // { label: "YouTube", icon: FaYoutube, href: "#" },
 ];

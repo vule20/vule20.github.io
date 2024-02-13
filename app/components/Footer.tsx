@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { socialLinks, contacts } from "./socials";
+import { contactUrls, contacts } from "@/app/components/Socials";
 
 const Footer = () => {
   const currentYear: number = new Date().getFullYear();
@@ -18,18 +18,17 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="items-center justify-center flex flex-col">
-        &copy; 2021-{currentYear} Vincent (Vu) Le.
+          &copy; 2021-{currentYear} Vincent (Vu) Le.
           <p className="flex">
             {React.createElement(locationContact?.icon || "", { size: 20 })}{" "}
             {locationContact?.value}
           </p>
-          
         </div>
 
         {/* contacts */}
         <div className="justify-center items-center">
           <ul className="flex">
-            {socialLinks.map((link, index) => (
+            {contactUrls.map((link, index) => (
               <li key={index} className="mr-2">
                 <a
                   href={link.href}

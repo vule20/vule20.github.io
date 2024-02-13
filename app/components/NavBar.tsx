@@ -17,7 +17,7 @@ const NavBar = () => {
     { label: "Blogs", href: "/blogs" },
     { label: "Coursework", href: "/coursework" },
     { label: "Misc", href: "/misc" },
-    { label: "Support", href: "/support" },
+    { label: "Tools", href: "/tools" },
     { label: "Resume", href: "/pdf/Vu_Le_Resume.pdf" },
   ];
 
