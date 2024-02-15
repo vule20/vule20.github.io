@@ -1,12 +1,15 @@
 {
-  "name": "react-ts-intro",
+  "homepage": "http://vincent-dl.github.io",
+  "name": "my-personal-homepage",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -37,6 +40,7 @@
     "react-notion-x": "^6.16.0",
     "react-pdf": "^7.7.0",
     "react-simplemde-editor": "^5.2.0",
+    "vercel": "^32.3.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -49,6 +53,7 @@
     "encoding": "^0.1.13",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "gh-pages": "^6.1.1",
     "postcss": "^8",
     "prismjs": "^1.29.0",
     "tailwindcss": "^3.3.0",
