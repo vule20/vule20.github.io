@@ -18,7 +18,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="items-center justify-center flex flex-col">
-          &copy; 2021-{currentYear} Vincent (Vu) Le.
+          &copy; 2021-{currentYear} Anthony (Vu) Le.
           <p className="flex">
             {React.createElement(locationContact?.icon || "", { size: 20 })}{" "}
             {locationContact?.value}

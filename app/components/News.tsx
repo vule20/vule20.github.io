@@ -10,20 +10,15 @@ function News() {
           for publication at Mobisys 2024. I'll be travelling to Japan this
           June!
         </li> */}
+        <li>[March 2024] I start working at UMass Amherst for my PhD!</li>
         <li>
-          [Feb 2024] I started my new role as a gradudate research assistant at
-          UMass Amherst!
-        </li>
-        <li>
-          [Jan 2024] I got multiple offers for my PhD application in Computer
-          Science from US universities! Many thanks to my mentors, collaborators
-          and friends for your valueless supports!
+          [Jan-March 2024] I got multiple offers for my PhD application in
+          computer science from US universities!
         </li>
         <li>
           [Oct 2023] Our paper on face identification got accepted for
           publication at IEEE WACV 2023!
         </li>
-        <li>[June 2022] I graduated from college!</li>
       </ul>
     </div>
   );

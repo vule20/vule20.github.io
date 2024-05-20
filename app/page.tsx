@@ -14,14 +14,11 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 mb-10">
           {/* avatar div */}
           <div className="relative lg:pl-20">
-            <div className="relative w-56 h-56 overflow-hidden rounded-full max-w-xs px-0 mb-4 lg:max-w-none mx-10">
-              <img
-                src="/images/avatar.jpg"
-                alt="Vincent (Vu)&rsquo;s avatar"
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute top-0 left-0 w-16 h-16 bg-green-500 border-2 border-white rounded-full"></div>
-            </div>
+            <img
+              src="/images/avatar.jpeg"
+              alt="Vincent (Vu)&rsquo;s avatar"
+              className="relative w-56 h-56 overflow-hidden rounded-full max-w-xs px-0 mb-4 lg:max-w-none mx-10"
+            />
 
             {/* <div className="lg:pl-20"> */}
             {/* Contacts such as email and address */}

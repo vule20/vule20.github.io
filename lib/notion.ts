@@ -6,7 +6,6 @@ export const notion = new NotionAPI();
 
 export const fetchDataFromPageId = async (pageId: string) => {
   try {
-    const notion = new NotionAPI();
     const recordMaps = await notion.getPage(pageId);
 
     return recordMaps;
@@ -17,7 +16,7 @@ export const fetchDataFromPageId = async (pageId: string) => {
 
 
 
-export const fetchAllData = async (pageIds) => {
+export const fetchAllData = async (pageIds: string[]) => {
   const allDataPromises = pageIds.map(async (url) => {
     const data = await fetchDataFromPageId(url);
     return data;

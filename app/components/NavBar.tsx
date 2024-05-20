@@ -15,9 +15,7 @@ const NavBar = () => {
     { label: "Projects", href: "/projects" },
     { label: "Publications", href: "/publications" },
     { label: "Blogs", href: "/blogs" },
-    { label: "Coursework", href: "/coursework" },
     { label: "Misc", href: "/misc" },
-    { label: "Tools", href: "/tools" },
     { label: "Resume", href: "/pdf/Vu_Le_Resume.pdf" },
   ];
 
@@ -31,7 +29,7 @@ const NavBar = () => {
                 <div className="">
                   <Link href="/">
                     <h1 className="text-2xl font-bold text-[#991b1b]">
-                      Vincent <span className="text-[#292524]">Le</span>
+                      Anthony (Vu) <span className="text-[#292524]">Le</span>
                     </h1>
                   </Link>
                 </div>

@@ -29,6 +29,7 @@ export default async function Home() {
     .filter((path) => path && path !== "/");
 
   const recordMaps = await fetchAllData(paths);
+  console.log(recordMaps);
 
   return (
     <main>
