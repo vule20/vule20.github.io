@@ -29,7 +29,7 @@ const NavBar = () => {
                 <div className="">
                   <Link href="/">
                     <h1 className="text-2xl font-bold text-[#991b1b]">
-                      Anthony (Vu) <span className="text-[#292524]">Le</span>
+                      Vu (Anthony) <span className="text-[#292524]">Le</span>
                     </h1>
                   </Link>
                 </div>

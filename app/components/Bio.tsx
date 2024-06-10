@@ -4,10 +4,9 @@ function Bio() {
   return (
     <div>
       <p className="mb-2">
-        I am a first year computer science Ph.D student in the Maining College
-        of Information and Computer Sciences, University of Massachusetts
-        Amherst. I'm advised by VP Nguyen and Yilun Xu from Lawrence Berkeley
-        National Laboratory on qubits control and readout.
+        I am a first year Ph.D student in the Maining College of Information and
+        Computer Sciences, University of Massachusetts Amherst. I'm advised by
+        VP Nguyen and Yilun Xu on quantum computing.
       </p>
 
       <p className="mb-2">
@@ -23,12 +22,12 @@ function Bio() {
       </p>
 
       <p className="mb-2">
-        Apart from doing research, I'm also a founding engineer who builds and
-        develops{" "}
+        Apart from doing research, I also enjoy building scalable systems and in
+        my part time, I work as a founding engineer who builds and develops{" "}
         <a href="https://abbies.live" className="font-bold underline">
           abbies.live
         </a>{" "}
-        , a platform for sharing local events in San Francisco.
+        , a platform for sharing local events or where to go.
       </p>
     </div>
   );
