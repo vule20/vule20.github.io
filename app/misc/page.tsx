@@ -6,9 +6,9 @@ function page() {
       <div>
         <h1 className="font-bold text-2xl text-red-500">Gym</h1>
         <h1 className="text-gray-900 text-xl pr-32">
-          I&rsquo;m a big fan of gym. Here's are some gym exercises I love. When
-          I was in Vietnam, I usually work out at California Fitness, a primier
-          gym center in Vietnam.
+          I&rsquo;m a big fan of gym. Here&apos;s are some gym exercises I love.
+          When I was in Vietnam, I usually work out at California Fitness, a
+          primier gym center in Vietnam.
         </h1>
         <div className="carousel w-full">
           <div id="item1" className="carousel-item w-full">
@@ -105,7 +105,7 @@ function page() {
         <div>
           <h1 className="font-bold text-2xl text-red-500">Travel</h1>
           <h1 className="text-gray-900 text-xl pr-32">
-            Some sites in Vietnam, Singapore, Japan, USA I've been to.
+            Some sites in Vietnam, Singapore, Japan, USA I&apos;ve been to.
           </h1>
           <div className="carousel carousel-end rounded-box">
             <div className="carousel-item">

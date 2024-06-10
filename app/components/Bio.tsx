@@ -5,7 +5,7 @@ function Bio() {
     <div>
       <p className="mb-2">
         I am a first year Ph.D student in the Maining College of Information and
-        Computer Sciences, University of Massachusetts Amherst. I'm advised by
+        Computer Sciences, University of Massachusetts Amherst. I&apos;m advised by
         VP Nguyen and Yilun Xu on quantum computing.
       </p>
 
