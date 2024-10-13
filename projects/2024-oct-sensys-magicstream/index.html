@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta
       name="description"
-      content="Fast and Interpretable Face Identification for Out-Of-Distribution Data Using Vision Transformers"
+      content="MagicStream: Bandwidth-conserving Immersive Telepresence via Semantic Communication"
     />
     <meta name="keywords" content="Nerfies, D-NeRF, NeRF" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Fast and Interpretable Face Identification for Out-Of-Distribution Data Using Vision Transformers</title>
+    <title>MagicStream: Bandwidth-conserving Immersive Telepresence via Semantic Communication</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -57,24 +57,21 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
-                Fast and Interpretable Face Identification for Out-Of-Distribution Data Using Vision Transformers
+                MagicStream: Bandwidth-conserving Immersive Telepresence via Semantic Communication
               </h1>
               <div class="is-size-5 publication-authors">
-                <span class="author-block"> <a href="https://haithanhp.github.io/">Hai Phan</a><sup>1</sup>,</span>
-                <span class="author-block"> <a>Cindy Le</a><sup>2</sup>,</span>
-                <span class="author-block"> <a href="https://vule.us">Vu Le</a><sup>3</sup>, </span>
-                <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=2yAMJ1YAAAAJ&hl=en&oi=ao/">Yihui He</a
-                  ><sup>4</sup>,
-                </span>
-                <span class="author-block"> <a>Anh Totti Nguyen</a><sup>1</sup> </span>
+                <span class="author-block"> <a href="http://felixshing.github.io">Ruizhi Cheng</a><sup>1</sup>,</span>
+                <span class="author-block"> <a>Nan Wu</a><sup>1</sup>,</span>
+                <span class="author-block"> <a href="https://vule.us">Vu Le</a><sup>2</sup>, </span>
+                <span class="author-block"> <a>Eugene Chai</a><sup>3</sup>, </span>
+                <span class="author-block"> <a>Matteo Varvello</a><sup>3</sup>, </span>
+                <span class="author-block"> <a href="https://cs.gmu.edu/~bohan/">Bo Han</a><sup>1</sup> </span>
               </div>
 
               <div class="is-size-5 publication-authors">
-                <span class="author-block"><sup>1</sup>Auburn University,</span>
-                <span class="author-block"><sup>2</sup>Columbia University,</span>
-                <span class="author-block"><sup>3</sup>Phenikaa University</span>
-                <span class="author-block"><sup>4</sup>Carnegie Mellon University</span>
+                <span class="author-block"><sup>1</sup>George Mason University,</span>
+                <span class="author-block"><sup>2</sup>University of Massachusetts Amherst,</span>
+                <span class="author-block"><sup>3</sup>Nokia Bell Labs</span>
               </div>
 
               <div class="column has-text-centered">
@@ -82,7 +79,7 @@
                   <!-- PDF Link. -->
                   <span class="link-block">
                     <a
-                      href="https://arxiv.org/pdf/2311.02803"
+                      href="../../papers/sensys24/magicstream-sensys24-final233.pdf"
                       class="external-link button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -91,7 +88,7 @@
                       <span>arXiv</span>
                     </a>
                   </span>
-                  <!-- Video Link. -->
+                  <!-- Video Link.
                   <span class="link-block">
                     <a
                       href="https://www.youtube.com/watch?v=M9VXxayidHY&t=4s"
@@ -102,9 +99,9 @@
                       </span>
                       <span>Video</span>
                     </a>
-                  </span>
+                  </span> -->
                   <!-- Code Link. -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a
                       href="https://github.com/anguyen8/face-vit"
                       class="external-link button is-normal is-rounded is-dark"
@@ -114,7 +111,7 @@
                       </span>
                       <span>Code</span>
                     </a>
-                  </span>
+                  </span> -->
                 </div>
               </div>
             </div>
@@ -128,10 +125,12 @@
       <div class="container is-max-desktop">
         <div class="hero-body">
           <video id="teaser" autoplay muted loop playsinline height="100%">
-            <source src="./static/images/face-vit-demo.png" type="image/png" />
+            <source src="./static/images/face-vit-demo.mp4" type="image/png" />
           </video>
           <h2 class="subtitle has-text-centered">
-            <span class="dnerf">Face ViT</span> can regconize faces from out-of-distribution data relatively fast.
+            <span class="dnerf">MagicStream</span> is a groundbreaking semantic-driven immersive telepresence system
+            that significantly reduces Internet bandwidth consumption—by up to 1195×—while preserving high visual
+            quality through efficient extraction and delivery of compact semantic details from 3D user representations
           </h2>
         </div>
       </div>
@@ -147,7 +146,7 @@
             <div class="item item-chair-tp">
               <div class="content has-text-centered">
                 <div>
-                  <img src="static/images/face-vit_H2L-architecture-768x515.jpg" alt="method" class="center" />
+                  <img src="static/images/demo5.png" alt="method" class="center" />
                 </div>
               </div>
             </div>
@@ -179,6 +178,13 @@
                 </div>
               </div>
             </div>
+            <div class="item item-demo4">
+              <div class="content has-text-centered">
+                <div>
+                  <img src="static/images/demo6.png" alt="method" class="center" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -192,18 +198,20 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Most face identification approaches employ a Siamese neural network to compare two images at the image
-                embedding level. Yet, this technique can be subject to occlusion (e.g. faces with masks or sunglasses)
-                and out-of-distribution data. DeepFace-EMD (Phan et al. 2022) reaches state-of-the-art accuracy on
-                out-of-distribution data by first comparing two images at the image level, and then at the patch level.
-                Yet, its later patch-wise re-ranking stage admits a large O(n3logn) time complexity (for n patches in an
-                image) due to the optimal transport optimization. In this paper, we propose a novel, 2-image Vision
-                Transformers (ViTs) that compares two images at the patch level using cross-attention. After training on
-                2M pairs of images on CASIA Webface (Yi et al. 2014), our model performs at a comparable accuracy as
-                DeepFace-EMD on out-of-distribution data, yet at an inference speed more than twice as fast as
-                DeepFace-EMD (Phan et al. 2022). In addition, via a human study, our model shows promising
-                explainability through the visualization of cross-attention. We believe our work can inspire more
-                explorations in using ViTs for face identification.
+                Immersive telepresence has the potential to revolutionize remote communication by offering a highly
+                interactive and engaging user experience. However, state-of-the-art exchanges large volumes of 3D
+                content to achieve satisfactory visual quality, resulting in sub- stantial Internet bandwidth
+                consumption. To tackle this challenge, we introduce MagicStream, a first-of-its-kind semantic-driven im-
+                mersive telepresence system that effectively extracts and delivers compact semantic details of captured
+                3D representation of users, instead of traditional bit-by-bit communication of raw content. To minimize
+                bandwidth consumption while maintaining low end- to-end latency and high visual quality, MagicStream
+                incorporates the following key innovations: (1) efficient extraction of user’s skin/cloth color and
+                motion semantics based on lighting character- istics and body keypoints, respectively; (2) novel,
+                real-time human body reconstruction from motion semantics; and (3) on-the-fly neu- ral rendering of
+                users’ immersive representation with color seman- tics. We implement a prototype of MagicStream and
+                extensively evaluate its performance through both controlled experiments and user trials. Our results
+                show that, compared to existing schemes, MagicStream can drastically reduce Internet bandwidth usage by
+                up to 1195×while maintaining good visual quality
               </p>
             </div>
           </div>
