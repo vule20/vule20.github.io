@@ -47,5 +47,5 @@ jobs:
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
         git add blogs/
-        git commit -m "Update blog content from blogging branch"
-        git push origin main
+        git commit -m "Update blog contents from blogging branch and merge with for deployment"
+        git push https://x-access-token:${{ secrets.GH_ACTION_TOKEN }}@github.com/${{ github.repository }} main
