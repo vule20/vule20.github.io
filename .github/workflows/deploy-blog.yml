@@ -52,5 +52,4 @@ jobs:
         git config user.email vule20.cs@gmail.com
         git add blogs/
         git commit -m "Update blog contents from blogging branch and merge with for deployment" || true
-        git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
-        git push -u origin main
+        git push
