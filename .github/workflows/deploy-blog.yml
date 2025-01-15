@@ -40,13 +40,6 @@ jobs:
       run: |
         mkdir -p blogs
         cp -r _site/* blogs/
-      env:
-        ACCESS_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        EXCLUDED: ${{ secrets.EXCLUDED }}
-        EXCLUDED_LANGS: ${{ secrets.EXCLUDED_LANGS }}
-        EXCLUDE_FORKED_REPOS: true
-
 
     # Step 6: Commit and push changes to main
     - name: Commit and push changes
@@ -55,5 +48,7 @@ jobs:
         git config user.email "vule20.cs@gmail.com"
         git add blogs/
         git commit -m "Update blog contents from blogging branch and merge with for deployment" || true
-        git push https://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@github.com/vule20/vule20.github.io.git blogging
+        git push https://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@github.com/vule20/vule20.github.io.git main
+        git remote set-url origin https://x-access-token:${{ secrets.GH_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
+        git push -u origin main
 
