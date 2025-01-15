@@ -39,7 +39,7 @@ jobs:
     - name: Copy generated jekyll _site to the blogs folder
       run: |
         mkdir -p blogs
-        cp -r _site/* blogs/
+        rsync -av --delete _site/ blogs/
       env:
         ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
