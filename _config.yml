@@ -1,7 +1,7 @@
 # Site
-name: "Mediumish"
-title: "Mediumish"
-description: "Jekyll template, Medium styled, free for bloggers."
+name: "<a href='https://vule20.github.io'>Anthony Vu Le</a>'s blogs"
+title:
+description:
 logo: "assets/images/logo.png"
 favicon: "assets/images/logo.png"
 baseurl: "/blogs"
@@ -15,13 +15,14 @@ livereload: true
 # Authors
 authors:
   sal:
-    name: Vu
-    display_name: Vu
+    name: Vu Le
+    display_name: Vu Le
+    avatar: "assets/images/avatar.jpeg"
     gravatar: e56154546cf4be74e393c62d1ae9f9d4
     email: vule20.cs@gmail.com
     web: https://www.vule20.github.io
     twitter: https://x.com/AnthonyVuLe
-    description: "Vu Le, a PhD student at UMass Amherst and Berkeley Lab"
+    description: "PhD student at UMass Amherst"
   john:
     name: John
     display_name: John

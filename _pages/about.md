@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mediumish Template for Jekyll
+title: About the author
 permalink: /about
 comments: true
 ---
@@ -8,16 +8,12 @@ comments: true
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<p>I am a PhD student in Computer Science at UMass, passionate about advancing research and applying cutting-edge technologies to enhance daily workflows. My research primarily focuses on quantum computing and computer architecture, with additional interests in system design, scalable systems, and productivity-enhancing tools. Outside of academics, I am an ameture photographer, capturing moments with my Sony a6400 and a variety of lenses.</p>
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/mediumish-jekyll-template.png" alt="jekyll template mediumish" /></p>
-<h4>Documentation</h4>
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/DSC01362.jpeg" alt="A random tree in Amherst, MA, USA" /></p>
+<h4>Contact</h4>
 
-<p>Please, read the docs <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">here</a>.</p>
-
-<h4>Questions or bug reports?</h4>
-
-<p>Head over to our <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Github repository</a>!</p>
+<p>If you'd like to connect, feel free to reach out via my <a href="https://www.linkedin.com/in/anthony-vule/" target="_blank">LinkedIn</a>.</p>
 
 </div>
 
@@ -26,9 +22,9 @@ comments: true
 <div class="sticky-top sticky-top-80">
 <h5>Buy me a coffee</h5>
 
-<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish <i class="fab fa-github"></i></a>.</p>
+<p>Thank you for your support! Your donation helps me to maintain and improve my blogs and motivate me to write more.</p>
 
-<a target="_blank" href="https://www.wowthemes.net/donate/" class="btn btn-danger">Buy me a coffee</a> <a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/" class="btn btn-warning">Documentation</a>
+<a target="_blank" href="ko-fi.com/anthonyvle" class="btn btn-danger">Buy me a coffee</a>
 
 </div>
 </div>
