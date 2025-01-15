@@ -55,8 +55,5 @@ jobs:
         git config user.email "vule20.cs@gmail.com"
         git add blogs/
         git commit -m "Update blog contents from blogging branch and merge with for deployment" || true
-        echo "git remote set-url origin https://x-access-token:${{ secrets.GH_ACTION_TOKEN }}@github.com/vule20/vule20.github.io.git"
-        echo "git remote set-url origin https://x-access-token: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@github.com/vule20/vule20.github.io.git"
-        git remote set-url origin https://x-access-token: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@github.com/vule20/vule20.github.io.git
-        git push
+        git push https://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@github.com/vule20/vule20.github.io.git blogging
 
