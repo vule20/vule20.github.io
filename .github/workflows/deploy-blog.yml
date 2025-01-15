@@ -44,8 +44,8 @@ jobs:
     # Step 6: Commit and push changes to main
     - name: Commit and push changes
       run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "vule20.cs@gmail.com"
+        git config user.name github-actions
+        git config user.email vule20.cs@gmail.com
         git add blogs/
         git commit -m "Update blog contents from blogging branch and merge with for deployment" || true
         git remote set-url origin https://x-access-token:${{ secrets.GH_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
