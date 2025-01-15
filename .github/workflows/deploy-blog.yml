@@ -3,7 +3,7 @@ name: Deploy Jekyll Blog to Main Branch
 on:
   push:
     branches:
-      - main
+      - blogging
 
 jobs:
   build-and-deploy:
