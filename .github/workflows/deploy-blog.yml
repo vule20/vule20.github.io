@@ -40,6 +40,10 @@ jobs:
       run: |
         mkdir -p blogs
         cp -r _site/* blogs/
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
     # Step 6: Commit and push changes to main
     - name: Commit and push changes
@@ -48,5 +52,5 @@ jobs:
         git config user.email vule20.cs@gmail.com
         git add blogs/
         git commit -m "Update blog contents from blogging branch and merge with for deployment" || true
+        git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
         git push -u origin main
-        git remote set-url origin https://x-access-token:${{ secrets.GH_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
