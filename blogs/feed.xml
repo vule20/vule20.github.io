@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mediumish</title>
-    <description>Jekyll template, Medium styled, free for bloggers.</description>
+    <title></title>
+    <description></description>
     <link>/blogs/</link>
     <atom:link href="/blogs/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jan 2025 15:36:16 +0000</pubDate>
-    <lastBuildDate>Wed, 15 Jan 2025 15:36:16 +0000</lastBuildDate>
+    <pubDate>Wed, 15 Jan 2025 16:23:35 +0000</pubDate>
+    <lastBuildDate>Wed, 15 Jan 2025 16:23:35 +0000</lastBuildDate>
     <generator>Jekyll v4.3.4</generator>
     
       <item>
