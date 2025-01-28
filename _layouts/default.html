@@ -61,7 +61,10 @@
 
     <!-- Begin Menu Navigation
   ================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top mediumnavigation nav-down"
+      style="background-color: #991b1b"
+    >
       <div class="container pr-0">
         <!-- Begin Logo -->
         <a class="navbar-brand" href="{{ site.baseurl }}/">
@@ -90,15 +93,15 @@
 
             <li class="nav-item">
               {% endif %}
-              <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
+              <a style="color: white" class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/..">Home</a>
+              <a style="color: white" class="nav-link" href="{{ site.baseurl }}/..">Home</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+              <a style="color: white" class="nav-link" href="{{ site.baseurl }}/about">About</a>
             </li>
 
             {% include search-lunr.html %}
