@@ -24,6 +24,7 @@ import sys
 from pathlib import Path
 
 import boto3
+from botocore.config import Config
 from botocore.exceptions import ClientError
 from PIL import Image, ImageOps
 from dotenv import load_dotenv
@@ -33,7 +34,8 @@ from dotenv import load_dotenv
 ROOT        = Path(__file__).parent.parent
 GALLERY_DIR = ROOT / "gallery"
 PHOTOS_JSON = GALLERY_DIR / "photos.json"
-BUCKET      = "personal-website-photo-gallery"
+BUCKET      = "public"
+FOLDER      = "personal-website-photo-gallery"
 
 MAX_PX   = 1920   # longest edge
 QUALITY  = 82
@@ -64,6 +66,10 @@ s3 = boto3.client(
     aws_access_key_id=ACCESS_KEY,
     aws_secret_access_key=SECRET_KEY,
     region_name="auto",
+    config=Config(
+        s3={"addressing_style": "path"},
+        signature_version="s3v4",
+    ),
 )
 
 # ── helpers ───────────────────────────────────────────────────────────────────
@@ -78,6 +84,10 @@ def ensure_bucket():
             print(f"  created bucket '{BUCKET}'")
         else:
             raise
+
+
+def s3_key(filename):
+    return f"{FOLDER}/{filename}"
 
 
 def already_uploaded(key):
@@ -102,12 +112,11 @@ def compress(path: Path) -> tuple[bytes, str]:
 
 def upload(path: Path, force: bool = False) -> str:
     """Compress + upload one file. Returns public URL."""
-    key = path.name
-    # normalise extension to .jpg for everything we compress
-    key = Path(key).stem + ".jpg"
+    filename = Path(path.stem + ".jpg").name
+    key = s3_key(filename)
 
     if not force and already_uploaded(key):
-        print(f"  skip  {key} (already uploaded)")
+        print(f"  skip  {filename} (already uploaded)")
         return f"{PUBLIC_BASE}/{key}"
 
     original_kb = path.stat().st_size // 1024
@@ -121,7 +130,7 @@ def upload(path: Path, force: bool = False) -> str:
         ContentType=ct,
         CacheControl="public, max-age=31536000, immutable",
     )
-    print(f"  upload {key}  {original_kb}KB → {compressed_kb}KB")
+    print(f"  upload {filename}  {original_kb}KB → {compressed_kb}KB")
     return f"{PUBLIC_BASE}/{key}"
 
 
@@ -132,9 +141,9 @@ def update_photos_json(url_map: dict[str, str]):
 
     changed = 0
     for photo in photos:
-        stem = Path(photo["file"]).stem + ".jpg"
-        if stem in url_map:
-            photo["file"] = url_map[stem]
+        filename = Path(photo["file"]).stem + ".jpg"
+        if filename in url_map:
+            photo["file"] = url_map[filename]
             changed += 1
 
     with open(PHOTOS_JSON, "w") as f:
