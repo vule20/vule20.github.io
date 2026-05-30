@@ -13,9 +13,10 @@ function buildGrid(photos) {
     div.className = 'photo-item';
     div.dataset.cat = photo.category;
     div.dataset.caption = photo.caption;
+    div.dataset.full = photo.file;
 
     var img = document.createElement('img');
-    img.src = photo.file;
+    img.src = photo.thumbnail || photo.file;  // thumbnail in grid
     img.alt = photo.alt || photo.caption;
     img.loading = 'lazy';
 
@@ -40,8 +41,9 @@ function openLightbox(item) {
 
 function showSlide(idx) {
   var item = items[idx];
-  document.getElementById('lb-img').src = item.querySelector('img').src;
-  document.getElementById('lb-img').alt = item.querySelector('img').alt;
+  var lbImg = document.getElementById('lb-img');
+  lbImg.src = item.dataset.full || item.querySelector('img').src;  // full-size in lightbox
+  lbImg.alt = item.querySelector('img').alt;
   document.getElementById('lb-caption').textContent = item.dataset.caption || '';
 }
 
