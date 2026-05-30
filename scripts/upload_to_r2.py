@@ -142,15 +142,35 @@ def update_photos_json(full_map: dict, thumb_map: dict):
     with open(PHOTOS_JSON) as f:
         photos = json.load(f)
 
+    # update existing entries
+    existing = {Path(p["file"]).stem + ".jpg" for p in photos}
     for photo in photos:
         filename = Path(photo["file"]).stem + ".jpg"
         if filename in full_map:
             photo["file"]      = full_map[filename]
             photo["thumbnail"] = thumb_map[filename]
 
+    # append new entries (not yet in photos.json)
+    added = []
+    for filename, full_url in full_map.items():
+        if filename not in existing:
+            photos.append({
+                "file":      full_url,
+                "thumbnail": thumb_map[filename],
+                "caption":   Path(filename).stem,   # placeholder — edit manually
+                "category":  "southwest",            # placeholder — edit manually
+                "alt":       Path(filename).stem,
+            })
+            added.append(filename)
+
     with open(PHOTOS_JSON, "w") as f:
         json.dump(photos, f, indent=2)
-    print(f"\nupdated photos.json — {len(photos)} entries")
+
+    print(f"\nupdated photos.json — {len(photos)} entries ({len(added)} new)")
+    if added:
+        print("  Edit captions/categories for new entries:")
+        for f in added:
+            print(f"    {f}")
 
 
 # ── main ──────────────────────────────────────────────────────────────────────
