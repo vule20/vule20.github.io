@@ -5,12 +5,14 @@ Uploads two versions per photo:
   - full:      FOLDER/filename.jpg        (1920px, ~300KB) — lightbox
   - thumbnail: FOLDER/thumbnails/filename.jpg (600px,  ~60KB) — grid
 
+HEIC files in gallery/ are auto-converted to JPEG and deleted before upload.
+Syncs deletions: R2 objects with no matching local file are deleted.
 Updates gallery/photos.json with both URLs after upload.
 
 Usage:
-    pip install boto3 pillow python-dotenv
-    python scripts/upload_to_r2.py           # skip already-uploaded
-    python scripts/upload_to_r2.py --force   # re-upload everything
+    pip install boto3 pillow pillow-heif python-dotenv
+    python scripts/upload_to_r2.py           # skip already-uploaded, sync deletions
+    python scripts/upload_to_r2.py --force   # re-upload everything, sync deletions
 """
 
 import os
@@ -24,6 +26,13 @@ from botocore.config import Config
 from botocore.exceptions import ClientError
 from PIL import Image, ImageOps
 from dotenv import load_dotenv
+
+try:
+    import pillow_heif
+    pillow_heif.register_heif_opener()
+    _HEIC_SUPPORT = True
+except ImportError:
+    _HEIC_SUPPORT = False
 
 # ── config ────────────────────────────────────────────────────────────────────
 
@@ -68,6 +77,26 @@ s3 = boto3.client(
 )
 
 # ── helpers ───────────────────────────────────────────────────────────────────
+
+def convert_heic_files():
+    """Convert HEIC files in gallery/ to JPEG and delete originals."""
+    heic_files = sorted(p for p in GALLERY_DIR.iterdir() if p.suffix.lower() == ".heic")
+    if not heic_files:
+        return
+    if not _HEIC_SUPPORT:
+        print(f"WARNING: {len(heic_files)} HEIC file(s) found but pillow-heif not installed — skipping.")
+        print("  Run: pip install pillow-heif")
+        return
+    for path in heic_files:
+        img = ImageOps.exif_transpose(Image.open(path))
+        if img.mode in ("RGBA", "P"):
+            img = img.convert("RGB")
+        out = path.with_suffix(".jpg")
+        img.save(out, format="JPEG", quality=92, optimize=True)
+        path.unlink()
+        print(f"  heic  {path.name} → {out.name}")
+    print(f"converted {len(heic_files)} HEIC file(s)\n")
+
 
 def ensure_bucket():
     try:
@@ -138,9 +167,53 @@ def upload_photo(path: Path, force: bool = False) -> tuple[str, str]:
     )
 
 
-def update_photos_json(full_map: dict, thumb_map: dict):
+def list_r2_keys(prefix: str) -> list:
+    keys = []
+    paginator = s3.get_paginator("list_objects_v2")
+    for page in paginator.paginate(Bucket=BUCKET, Prefix=prefix):
+        for obj in page.get("Contents", []):
+            keys.append(obj["Key"])
+    return keys
+
+
+def sync_deletions(local_filenames: set) -> set:
+    """Delete R2 objects with no matching local file. Returns deleted filenames."""
+    all_keys  = list_r2_keys(f"{FOLDER}/")
+    full_keys  = [k for k in all_keys if not k.startswith(f"{FOLDER}/thumbnails/")]
+    thumb_keys = [k for k in all_keys if k.startswith(f"{FOLDER}/thumbnails/")]
+
+    to_delete = []
+    for key in full_keys:
+        if Path(key).name not in local_filenames:
+            to_delete.append({"Key": key})
+    for key in thumb_keys:
+        if Path(key).name not in local_filenames:
+            to_delete.append({"Key": key})
+
+    if not to_delete:
+        print("sync: nothing to delete")
+        return set()
+
+    deleted_filenames = {Path(d["Key"]).name for d in to_delete}
+    for i in range(0, len(to_delete), 1000):
+        s3.delete_objects(Bucket=BUCKET, Delete={"Objects": to_delete[i:i+1000]})
+
+    print(f"sync: deleted {len(to_delete)} R2 objects:")
+    for d in to_delete:
+        print(f"  {d['Key']}")
+
+    return deleted_filenames
+
+
+def update_photos_json(full_map: dict, thumb_map: dict, deleted_filenames: set = None):
     with open(PHOTOS_JSON) as f:
         photos = json.load(f)
+
+    # remove deleted entries
+    if deleted_filenames:
+        before = len(photos)
+        photos = [p for p in photos if Path(p["file"]).name not in deleted_filenames]
+        print(f"  removed {before - len(photos)} entries from photos.json")
 
     # update existing entries
     existing = {Path(p["file"]).stem + ".jpg" for p in photos}
@@ -181,6 +254,7 @@ def main():
     print(f"bucket : {BUCKET}/{FOLDER}")
     print(f"public : {PUBLIC_BASE}\n")
 
+    convert_heic_files()
     ensure_bucket()
 
     image_exts = {".jpg", ".jpeg", ".JPG", ".JPEG", ".png", ".PNG"}
@@ -202,7 +276,10 @@ def main():
         full_map[filename]  = full_url
         thumb_map[filename] = thumb_url
 
-    update_photos_json(full_map, thumb_map)
+    local_filenames = set(full_map.keys())
+    deleted = sync_deletions(local_filenames)
+
+    update_photos_json(full_map, thumb_map, deleted)
     print("done.")
 
 

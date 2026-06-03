@@ -7,13 +7,6 @@
     "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG09733.jpg"
   },
   {
-    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG09395.jpg",
-    "caption": "Horseshoe Bend, Page, AZ",
-    "category": "southwest",
-    "alt": "Horseshoe Bend",
-    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG09395.jpg"
-  },
-  {
     "file": "https://storage.vule.us/personal-website-photo-gallery/IMG09498.jpg",
     "caption": "Grand Canyon South Rim",
     "category": "southwest",
@@ -54,13 +47,6 @@
     "category": "southwest",
     "alt": "Red Rock Canyon hike",
     "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG08898.jpg"
-  },
-  {
-    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG08891.jpg",
-    "caption": "Red Rock Canyon, NV",
-    "category": "southwest",
-    "alt": "Desert landscape",
-    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG08891.jpg"
   },
   {
     "file": "https://storage.vule.us/personal-website-photo-gallery/IMG09673.jpg",
@@ -250,5 +236,96 @@
     "category": "wildlife",
     "alt": "Robin by water",
     "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/VUS09959.jpg"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/DSC02879.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/DSC02879.jpg",
+    "caption": "DSC02879",
+    "category": "southwest",
+    "alt": "DSC02879"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_0281.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_0281.jpg",
+    "caption": "IMG_0281",
+    "category": "southwest",
+    "alt": "IMG_0281"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_20220401_111535.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_20220401_111535.jpg",
+    "caption": "IMG_20220401_111535",
+    "category": "southwest",
+    "alt": "IMG_20220401_111535"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_2328.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_2328.jpg",
+    "caption": "IMG_2328",
+    "category": "southwest",
+    "alt": "IMG_2328"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_5956.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_5956.jpg",
+    "caption": "IMG_5956",
+    "category": "southwest",
+    "alt": "IMG_5956"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_6191.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_6191.jpg",
+    "caption": "IMG_6191",
+    "category": "southwest",
+    "alt": "IMG_6191"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_6570.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_6570.jpg",
+    "caption": "IMG_6570",
+    "category": "southwest",
+    "alt": "IMG_6570"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_6637.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_6637.jpg",
+    "caption": "IMG_6637",
+    "category": "southwest",
+    "alt": "IMG_6637"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_7164.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_7164.jpg",
+    "caption": "IMG_7164",
+    "category": "southwest",
+    "alt": "IMG_7164"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_7203.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_7203.jpg",
+    "caption": "IMG_7203",
+    "category": "southwest",
+    "alt": "IMG_7203"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_7302.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_7302.jpg",
+    "caption": "IMG_7302",
+    "category": "southwest",
+    "alt": "IMG_7302"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/IMG_8552.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/IMG_8552.jpg",
+    "caption": "IMG_8552",
+    "category": "southwest",
+    "alt": "IMG_8552"
+  },
+  {
+    "file": "https://storage.vule.us/personal-website-photo-gallery/NIKON D71008398.jpg",
+    "thumbnail": "https://storage.vule.us/personal-website-photo-gallery/thumbnails/NIKON D71008398.jpg",
+    "caption": "NIKON D71008398",
+    "category": "southwest",
+    "alt": "NIKON D71008398"
   }
 ]

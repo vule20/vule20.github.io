@@ -368,9 +368,11 @@
                     <h2>Miscellanea</h2>
                     <p>
                       Apart from research, I'm an experienced software and DevOps engineer who enjoys building
-                      scalable backend systems. Outside of work, I'm an avid adventurer — I've hiked national
-                      parks across the American Southwest (Grand Canyon, Zion, Death Valley, Horseshoe Bend,
-                      Joshua Tree), hiked the White Mountains in New Hampshire, and traveled across the US with camera in hand.
+                      scalable backend systems. Outside of work, I'm an avid adventurer — I love road trips and
+                      have driven across the US to explore national parks and trails firsthand.
+                      Most of my hikes and adventures (Grand Canyon, Zion, Death Valley, Horseshoe Bend,
+                      Joshua Tree, the White Mountains in New Hampshire) were made possible by hitting the road.
+                      I also really enjoy lifting at the gym, jogging, brewing coffee, planting flowers, and skiing.
                       I shoot with a Sony A6400 and a collection of Sigma and Sony lenses.
                       Check out my <a href="/gallery">photo gallery</a>.
                     </p>
@@ -400,6 +402,13 @@
                       Hosted on <a href="https://pages.cloudflare.com">Cloudflare Pages</a>
                       &nbsp;&middot;&nbsp;
                       Photos on <a href="https://www.cloudflare.com/developer-platform/r2/">Cloudflare R2</a>
+                    </p>
+                    <p style="text-align: center; font-size: small; color: #aaa">
+                      Last modified <span id="last-modified"></span>
+                      <script>
+                        var d = new Date(document.lastModified);
+                        document.getElementById('last-modified').textContent = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                      </script>
                     </p>
                   </td>
                 </tr>
